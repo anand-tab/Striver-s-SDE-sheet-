@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner sc = new Scanner(System.in);
+        int i = sc.nextInt();
+        int[] arr = new int[i];
+        int flag=0;
+        for(int j=0;j<i;j++){
+            arr[j] = sc.nextInt();
+        }
+        for(int x =0;x<i;x++){
+            for(int j=x;j<i;j++){
+                if(arr[x]>arr[j]){
+                    flag++;
+                }
+            }
+        }
+        System.out.println(flag);
+    }
+}
