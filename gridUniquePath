@@ -1,0 +1,26 @@
+//Combinatorics Solution
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+
+            int N = n+m-2;
+            int R = m-1;
+
+            double res = 1;
+
+            for (int i = 1; i <= R; i++) {
+                res = res * (N-R+i)/i;          //calculating nCr
+            }
+
+        System.out.println((int)res);
+
+
+    }
+}
+
